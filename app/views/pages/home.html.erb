@@ -1,2 +1,57 @@
 <% title("Home Page") %>
-<h1><i class="fa fa-home"></i> Home Page <small>views/pages/home.html.erb</small></h1>
+<h1><i class="fa fa-home"></i> Asheville Home Value </h1>
+</br>
+<h2> What is my home worth? </h2>
+</br>
+<table style="width:100%">
+  <tr>
+    <td>
+      <div class="row">
+        <div class="col-sm-6">
+    
+          <%= form_tag email_confirmation_path, method: 'post', html: {role: "form"} do %>
+    
+          <div class="form-group">
+            <%= label_tag :name, "Your name" %>
+            <div class="row">
+              <div class="col-xs-12">
+                <%= text_field_tag :name, @name, placeholder: "Enter your name...", :autofocus => true, class: "form-control" %>  
+              </div>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <%= label_tag :email, "Your email" %>
+            <div class="row">
+              <div class="col-xs-12">
+                <%= text_field_tag :email, @email, placeholder: "Enter your email...", class: "form-control" %>  
+              </div>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <%= label_tag :message, "Your address" %>
+            <div class="row">
+              <div class="col-xs-12">
+                <%= text_area_tag :message, @message, placeholder: "Enter your address...", rows: 3, class: "form-control" %>  
+              </div>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-xs-12 padded">
+              <button class='btn btn-primary'>
+                <i class='fa fa-envelope'></i> Get your value!
+              </button>
+            </div>
+          </div>
+          <% end %>
+      
+  </div>
+</div>
+    </td>
+    <td>
+      <img alt="Home Value" src="/assets/default_house.jpg" width="350" height="260"  />
+    </td>		
+  </tr>
+</table>
