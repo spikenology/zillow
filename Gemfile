@@ -46,7 +46,7 @@ end
 
 # PostgreSQL gem for Heroku
 group :production do
-  gem 'pg'
+  gem 'pg', '0.17.1'
 end
 
 # Unicorn: http://unicorn.bogomips.org
